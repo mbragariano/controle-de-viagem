@@ -1,0 +1,1 @@
+export { IUseCase } from './IUseCase';

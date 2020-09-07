@@ -1,4 +1,4 @@
-import { IHttpError, JsonResult } from './IHttpError';
+import { IHttpError, JsonResult } from './interfaces';
 
 export class BaseError extends Error implements IHttpError {
 

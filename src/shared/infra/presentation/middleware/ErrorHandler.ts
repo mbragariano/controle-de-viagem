@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { BaseError } from "../../../errors";
+import { BaseError } from "../../../impl/errors";
 
 export function errorHandler(
 	error: Error,

@@ -1,5 +1,5 @@
 import { BaseError } from './BaseError';
-import { IHttpError, JsonResult } from './IHttpError';
+import { IHttpError, JsonResult } from './interfaces';
 
 export class DuplicatedEntityError extends BaseError implements IHttpError {
 
