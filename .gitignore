@@ -1,4 +1,11 @@
+# Application
 node_modules
+build
 
+# Env Files
+.env*
+!.env.example
+
+# IDES and Text Editors
 .idea
 .vscode
