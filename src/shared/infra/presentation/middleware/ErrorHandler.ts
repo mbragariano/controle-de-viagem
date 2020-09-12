@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from "express";
-import { BaseError } from "../../../impl/errors";
+import { BaseError } from '../../../impl/errors';
+import { Request, Response, NextFunction } from 'express';
 
 export function errorHandler(
 	error: Error,
@@ -15,11 +15,12 @@ export function errorHandler(
 		return response.status(errorObject.code).json(errorObject);
 	}
 
-	return response.status(500).json({
-		code: 500,
-		name: error.name,
-		stack: error.stack,
-		devMessage: error.message,
-		message: 'Erro não tratado pelo aplicação.'
-	});
+	return response.status(500)
+		.json({
+			code: 500,
+			name: error.name,
+			stack: error.stack,
+			devMessage: error.message,
+			message: 'Erro não tratado pelo aplicação.'
+		});
 }

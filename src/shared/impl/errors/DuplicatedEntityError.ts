@@ -1,5 +1,5 @@
 import { BaseError } from './BaseError';
-import { IHttpError, JsonResult } from './interfaces';
+import { IHttpError, IJsonResult } from './interfaces';
 
 export class DuplicatedEntityError extends BaseError implements IHttpError {
 
@@ -9,7 +9,7 @@ export class DuplicatedEntityError extends BaseError implements IHttpError {
 		this.name = 'DuplicatedEntityError';
 	}
 
-	handleForHttp(): JsonResult {
+	handleForHttp(): IJsonResult {
 		return { ...super.handleForHttp(), code: 409 };
 	}
 

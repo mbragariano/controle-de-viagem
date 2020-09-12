@@ -1,4 +1,4 @@
-export interface JsonResult {
+export interface IJsonResult {
 	code: number;
 	name: string;
 	stack?: string;
@@ -8,6 +8,6 @@ export interface JsonResult {
 
 export interface IHttpError {
 
-	handleForHttp(): JsonResult;
+	handleForHttp(): IJsonResult;
 
 }

@@ -1,4 +1,4 @@
-import { IHttpError, JsonResult } from './interfaces';
+import { IHttpError, IJsonResult } from './interfaces';
 
 export class BaseError extends Error implements IHttpError {
 
@@ -12,7 +12,7 @@ export class BaseError extends Error implements IHttpError {
 		this._devMessage = devMessage;
 	}
 
-	handleForHttp(): JsonResult {
+	handleForHttp(): IJsonResult {
 		return {
 			code: 500,
 			name: this.name,

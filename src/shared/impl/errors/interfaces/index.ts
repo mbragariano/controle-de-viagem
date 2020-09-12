@@ -1,1 +1,1 @@
-export { IHttpError, JsonResult } from './IHttpError';
+export { IHttpError, IJsonResult } from './IHttpError';

@@ -1,5 +1,5 @@
 import { BaseError } from './BaseError';
-import { IHttpError, JsonResult } from './interfaces';
+import { IHttpError, IJsonResult } from './interfaces';
 
 export class EntityNotFound extends BaseError implements IHttpError {
 
@@ -9,7 +9,7 @@ export class EntityNotFound extends BaseError implements IHttpError {
 		this.name = 'EntityNotFound';
 	}
 
-	handleForHttp(): JsonResult {
+	handleForHttp(): IJsonResult {
 		return { ...super.handleForHttp(), code: 404 };
 	}
 
