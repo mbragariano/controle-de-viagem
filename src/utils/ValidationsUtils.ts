@@ -1,5 +1,5 @@
-import { IValidation, ValidationEntityError } from "../shared/impl/errors";
-import { validate, ValidationError, ValidationOptions } from "class-validator";
+import { IValidation, ValidationEntityError } from '../shared/impl/errors';
+import { validate, ValidationError, ValidationOptions } from 'class-validator';
 
 interface MessagesError {
 	message: string;

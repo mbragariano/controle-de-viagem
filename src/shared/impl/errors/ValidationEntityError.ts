@@ -1,5 +1,5 @@
-import { BaseError } from "./BaseError";
-import { IHttpError, IJsonResult } from "./interfaces";
+import { BaseError } from './BaseError';
+import { IHttpError, IJsonResult } from './interfaces';
 
 export interface IValidation {
 	value: any;
@@ -19,6 +19,10 @@ export class ValidationEntityError extends BaseError implements IHttpError {
 		private readonly _validations: IValidation[]
 	) {
 		super(message, devMessage);
+	}
+
+	get validations() {
+		return this._validations;
 	}
 
 	handleForHttp(): IValidationJsonResult {
